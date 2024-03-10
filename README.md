@@ -48,6 +48,8 @@ export default App;
 
 ## Props
 
+## Props
+
 ### `title`
 
 - **Type**: string
@@ -56,62 +58,59 @@ export default App;
 ### `icon`
 
 - **Type**: React.ReactNode
-- **Default**: undefined
 - **Description**: The icon to display next to the title.
 
 ### `isOpen`
 
 - **Type**: boolean
-- **Default**: undefined
+- **Default**: false
 - **Description**: A boolean to control whether the accordion is initially open or closed.
 
-### `accordionStyle`
+### `contentPosition`
 
-- **Type**: React.CSSProperties
-- **Default**: undefined
-- **Description**: An object of CSS properties to apply to the accordion.
-
-### `contentStyle`
-
-- **Type**: React.CSSProperties
-- **Default**: undefined
-- **Description**: An object of CSS properties to apply to the content of the accordion item.
-
-### `maxWidth`
-
-- **Type**: string
-- **Default**: undefined
-- **Description**: The maximum width of the accordion.
+- **Type**: "top" | "bottom"
+- **Default**: "bottom"
+- **Description**: The position of the content relative to the title.
 
 ### `rotateIcon`
 
 - **Type**: boolean
-- **Default**: undefined
+- **Default**: true
 - **Description**: A boolean to control whether the icon should rotate when the accordion is opened.
 
 ### `animate`
 
 - **Type**: boolean
-- **Default**: undefined
+- **Default**: true
 - **Description**: A boolean to control whether the accordion should animate when opened or closed.
 
 ### `animationDuration`
 
 - **Type**: string
-- **Default**: undefined
+- **Default**: "0.25s"
 - **Description**: The duration of the animation when the accordion item is opened or closed.
 
 ### `animationTimingFunction`
 
 - **Type**: string
-- **Default**: undefined
+- **Default**: "ease"
 - **Description**: The timing function to use for the animation.
 
-### `contentPosition`
+### `accordionStyle`
 
-- **Type**: "top" | "bottom"
-- **Default**: undefined
-- **Description**: The position of the content relative to the title.
+- **Type**: React.CSSProperties
+- **Description**: An object of CSS properties to apply to the accordion.
+
+### `contentStyle`
+
+- **Type**: React.CSSProperties
+- **Description**: An object of CSS properties to apply to the content of the accordion item.
+
+### `maxWidth`
+
+- **Type**: string
+- **Default**: "300px"
+- **Description**: The maximum width of the accordion.
 
 ```
 Feel free to customize the content as needed and add any additional sections or details that you think would be helpful for users of your component.
