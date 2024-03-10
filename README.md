@@ -1,20 +1,27 @@
-# React Accordion Component
+# React Configurable Accordion
 
 A customizable and animated React accordion component for easily creating toggleable content sections.
 
 ## Installation
 
-To install the `react-accordion-component` package, use the following npm command:
+To install the `react-configurable-accordion` package, use the following npm command:
 
 ```bash
-npm install react-accordion-component
+npm install react-configurable-accordion
 ```
 
-```js
-import React from "react";
-import Accordion from "react-accordion-component";
-import chevronIcon from "./path/to/chevron-icon.svg"; // Replace with the actual path to your icon
+## Usage
 
+First import the accordion and its styles
+
+```js
+import Accordion from "react-configurable-accordion";
+import "react-configurable-accordion/dist/style.css";
+```
+
+Then use it in your component
+
+```js
 function App() {
   return (
     <>
@@ -39,58 +46,72 @@ function App() {
 export default App;
 ```
 
-# Props
+## Props
 
--title (required)
---Type: string
---Description: The title of the accordion section.
+### `title`
 
--icon
---Type: React.ReactNode
---Description: An optional icon element to be displayed alongside the title.
+- **Type**: string
+- **Description**: The title of the accordion item.
 
--isOpen
---Type: boolean
---Default: false
---Description: Set to true if you want the accordion to be initially open.
+### `icon`
 
--accordionStyle
---Type: React.CSSProperties
-Description: Custom styles for the accordion container.
+- **Type**: React.ReactNode
+- **Default**: undefined
+- **Description**: The icon to display next to the title.
 
--contentStyle
---Type: React.CSSProperties
---Description: Custom styles for the content within the accordion.
+### `isOpen`
 
--maxWidth
---Type: string
---Default: "300px"
---Description: The maximum width of the accordion container.
+- **Type**: boolean
+- **Default**: undefined
+- **Description**: A boolean to control whether the accordion is initially open or closed.
 
--rotateIcon
---Type: boolean
---Default: true
---Description: Set to false if you want to disable the rotation of the icon on toggle.
+### `accordionStyle`
 
--animate
---Type: boolean
---Default: true
---Description: Set to false to disable animation on accordion toggle.
+- **Type**: React.CSSProperties
+- **Default**: undefined
+- **Description**: An object of CSS properties to apply to the accordion.
 
--animationDuration
---Type: string
---Default: "0.25s"
---Description: The duration of the animation.
+### `contentStyle`
 
--animationTimingFunction
---Type: string
---Default: "ease"
---Description: The timing function for the animation.
+- **Type**: React.CSSProperties
+- **Default**: undefined
+- **Description**: An object of CSS properties to apply to the content of the accordion item.
 
--contentPosition
---Type: "top" | "bottom"
---Default: "bottom"
---Description: The position of the content relative to the title.
+### `maxWidth`
+
+- **Type**: string
+- **Default**: undefined
+- **Description**: The maximum width of the accordion.
+
+### `rotateIcon`
+
+- **Type**: boolean
+- **Default**: undefined
+- **Description**: A boolean to control whether the icon should rotate when the accordion is opened.
+
+### `animate`
+
+- **Type**: boolean
+- **Default**: undefined
+- **Description**: A boolean to control whether the accordion should animate when opened or closed.
+
+### `animationDuration`
+
+- **Type**: string
+- **Default**: undefined
+- **Description**: The duration of the animation when the accordion item is opened or closed.
+
+### `animationTimingFunction`
+
+- **Type**: string
+- **Default**: undefined
+- **Description**: The timing function to use for the animation.
+
+### `contentPosition`
+
+- **Type**: "top" | "bottom"
+- **Default**: undefined
+- **Description**: The position of the content relative to the title.
 
 ```
 Feel free to customize the content as needed and add any additional sections or details that you think would be helpful for users of your component.
